@@ -1,0 +1,195 @@
+body{
+    display: flex;
+    justify-content: center;
+
+}
+.contenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-top: 300px;
+    margin-right: 250px;
+}
+.care {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: rotation 3s infinite alternate, changeColor 3s infinite alternate;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+    0% { background-color: red; }
+    50% { background-color: blue; }
+    100% { background-color: red; }
+}
+/*---------------------Passons à la queue ---------------------*/
+.keran {
+    border: 2px solid;
+    background-color: grey;
+    position: relative;
+    width: 738px;
+    height: 547px;
+    margin: 100px auto;
+}
+
+.carre {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: move 5s linear infinite, changeColor 2s infinite;
+}
+
+.carre:nth-child(1) {
+    background-color: red;
+}
+
+.carre:nth-child(2) {
+    background-color: green;
+    animation-delay: 0.5s;
+}
+
+.carre:nth-child(3) {
+    background-color: blue;
+    animation-delay: 1s;
+}
+
+.carre:nth-child(4) {
+    background-color: yellow;
+    animation-delay: 1.5s;
+}
+
+@keyframes move {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 690px;
+    }
+    50% {
+        top: 500px;
+        left: 690px;
+    }
+    75% {
+        top: 495px;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes changeColor {
+    0% { background-color: red; }
+    50% { background-color: purple; }
+    100% { background-color: red; }
+}
+/*-----------------------------Passons à la balle qui rebondit---------------------------*/
+.balle {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rebond 3s ease-in-out infinite;
+}
+
+@keyframes rebond {
+    0% { top: 0; }
+    20% { top: 80%; }
+    40% { top: 50%; }
+    60% { top: 80%; }
+    80% { top: 60%; }
+    100% { top: 80%; }
+}
+.container{
+    width: 50px;
+    height: 350px;
+   border: 3px solid blue;
+    position: relative;
+    overflow: hidden;
+}
+/*-------------------------------Passons au Menu------------------------------*/
+.menu{
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    background-color: black;
+    width: 59px;
+    transition: height 3s;
+    border-radius: 5px;
+}
+.menu span {
+    color: white;
+}
+.menu:hover{
+    height: 465px;
+}
+/*------------------------- Et enfin le loader-----------------------------*/
+.rond{
+   box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    margin-top: 300px;
+}
+.ball_1{
+    margin: 2px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    animation-name: rond;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: background-color 2s;
+}
+.ball_2{
+    margin: 2px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    animation-delay: 2s;
+    animation-name: rond;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: background-color 2s;
+}
+.ball_3  {
+    margin: 2px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    animation-name: rond;
+    animation-duration: 3s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    transition: background-color 2s;
+}
+@keyframes rond {
+    0% {background-color: black;}
+    50% {background-color: lightslategrey;}
+    100% {background-color: white;}
+}
+
+
